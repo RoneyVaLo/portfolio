@@ -1,11 +1,19 @@
 import React from "react";
+import Layout from "./components/Layout";
+import Hero from "./components/Hero";
+import AboutMe from "./components/AboutMe";
 
 const App = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center gap-10">
-      <h1 className="text-4xl">Hola Mundo</h1>
-      <p className="code-font text-2xl animate-fade-in">Bloque de Código</p>
-    </div>
+    <Layout>
+      <main className="min-h-screen bg-[#F0F0F0]">
+        {/* Hero Section */}
+        <Hero />
+
+        {/* About Me Section */}
+        <AboutMe />
+      </main>
+    </Layout>
   );
 };
 
