@@ -2,6 +2,10 @@
 @import "tailwindcss";
 @plugin '@midudev/tailwind-animations';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
