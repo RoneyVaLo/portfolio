@@ -2,17 +2,31 @@ import React from "react";
 import { cn } from "../utils/cn";
 import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
+import { useInView } from "../hooks/useInView";
 
 const AboutMe = () => {
+  const [ref, isVisible] = useInView();
+
   return (
-    <section id="acerca-de-mi" className="py-20 md:py-32">
+    <section id="acerca-de-mi" ref={ref} className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="mb-12 text-center code-font text-3xl font-bold text-[#333] md:text-4xl animate-fade-in-left">
+        <h2
+          className={cn(
+            "mb-12 text-center code-font text-3xl font-bold text-[#333] md:text-4xl",
+            isVisible && "animate-fade-in-left"
+          )}
+        >
           Acerca de mí
         </h2>
         <div className="grid gap-8 md:grid-cols-2">
           <div className="flex justify-center">
-            <div className="relative h-96 w-80 overflow-hidden rounded-lg animate-pulse-fade-in animate-delay-300 animate-duration-1000">
+            <div
+              className={cn(
+                "relative h-96 w-80 overflow-hidden rounded-lg",
+                isVisible &&
+                  "animate-pulse-fade-in animate-delay-300 animate-duration-1000"
+              )}
+            >
               <img
                 src="/profile2.jpg"
                 alt="Foto profesional"
@@ -23,23 +37,43 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="space-y-6">
-            <h3 className="code-font text-2xl font-semibold text-[#3498DB] animate-fade-in-left animate-delay-300">
+            <h3
+              className={cn(
+                "code-font text-2xl font-semibold text-[#3498DB]",
+                isVisible && "animate-fade-in-left animate-delay-300"
+              )}
+            >
               Mi historia
             </h3>
-            <p className="text-lg text-[#333]/80 text-justify text-balance animate-fade-in-left animate-delay-500">
+            <p
+              className={cn(
+                "text-lg text-[#333]/80 text-justify text-balance",
+                isVisible && "animate-fade-in-left animate-delay-400"
+              )}
+            >
               Desde que descubrí la programación, me apasionó la capacidad de
               crear soluciones que impactan positivamente en la vida de las
               personas. Mi objetivo profesional es desarrollar aplicaciones que
               combinen funcionalidad, rendimiento y experiencia de usuario
               excepcional.
             </p>
-            <p className="text-lg text-[#333]/80 text-justify text-balance animate-fade-in-left animate-delay-700">
+            <p
+              className={cn(
+                "text-lg text-[#333]/80 text-justify text-balance",
+                isVisible && "animate-fade-in-left animate-delay-500"
+              )}
+            >
               Me caracterizo por mi capacidad de aprendizaje continuo, trabajo
               en equipo y resolución creativa de problemas. Creo firmemente en
               el código limpio, las buenas prácticas y la importancia de la
               comunicación efectiva en el desarrollo de software.
             </p>
-            <div className="flex space-x-4 pt-4 animate-fade-in-left animate-delay-900">
+            <div
+              className={cn(
+                "flex space-x-4 pt-4",
+                isVisible && "animate-fade-in-left animate-delay-700"
+              )}
+            >
               <a
                 href="https://github.com/RoneyVaLo/"
                 target="_blank"
