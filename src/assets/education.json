@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Ingeniería en Sistemas Computacionales",
+    "institution": "Universidad Tecnológica",
+    "year": "2018 - 2022"
+  },
+  {
+    "title": "Certificación en Desarrollo Web Full Stack",
+    "institution": "Bootcamp Coding Academy",
+    "year": "2022"
+  },
+  {
+    "title": "Certificación en React Native",
+    "institution": "Plataforma de Aprendizaje Online",
+    "year": "2023"
+  },
+  {
+    "title": "Máster en Inteligencia Artificial",
+    "institution": "Universidad Internacional de Tecnología",
+    "year": "2022 - 2023"
+  },
+  {
+    "title": "Certificación AWS Solutions Architect",
+    "institution": "Amazon Web Services",
+    "year": "2023"
+  },
+  {
+    "title": "Especialización en DevOps y CI/CD",
+    "institution": "Instituto de Tecnologías Avanzadas",
+    "year": "2022"
+  },
+  {
+    "title": "Certificación en Scrum Master",
+    "institution": "Scrum Alliance",
+    "year": "2021"
+  },
+  {
+    "title": "Curso de Ciberseguridad Aplicada",
+    "institution": "Centro de Seguridad Digital",
+    "year": "2023"
+  },
+  {
+    "title": "Diplomado en UX/UI Design",
+    "institution": "Escuela de Diseño Digital",
+    "year": "2022"
+  },
+  {
+    "title": "Certificación en Google Cloud Platform",
+    "institution": "Google Cloud",
+    "year": "2023"
+  },
+  {
+    "title": "Curso Avanzado de Python para Data Science",
+    "institution": "Academia de Ciencia de Datos",
+    "year": "2022"
+  },
+  {
+    "title": "Certificación en Blockchain Development",
+    "institution": "Blockchain Institute",
+    "year": "2023"
+  }
+]

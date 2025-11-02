@@ -1,0 +1,21 @@
+{
+  "technicalSkills": [
+    { "name": "HTML/CSS", "level": 90 },
+    { "name": "JavaScript", "level": 85 },
+    { "name": "React", "level": 80 },
+    { "name": "Node.js", "level": 75 },
+    { "name": "TypeScript", "level": 70 },
+    { "name": "MongoDB", "level": 65 }
+  ],
+
+  "softSkills": [
+    "Trabajo en equipo",
+    "Comunicación efectiva",
+    "Resolución de problemas",
+    "Gestión del tiempo",
+    "Adaptabilidad",
+    "Pensamiento crítico",
+    "Creatividad",
+    "Liderazgo"
+  ]
+}

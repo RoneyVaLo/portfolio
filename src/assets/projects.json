@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Portal Docente",
+    "description": "Aplicación full-stack para la gestión de la evaluación académica, desarrollada para CTP Los Chiles como proyecto de graduación",
+    "image": "admin_docente.png",
+    "technologies": ["ReactJS", "Tailwind CSS", "ASP.NET Core", "PostreSQL"],
+    "github": "https://github.com/RoneyVaLo/ctp-docente-portal",
+    "demo": "https://ctp-docente-portal.onrender.com/"
+  },
+  {
+    "title": "Galeria de Logros",
+    "description": "Una colección de logros y certificaciones",
+    "image": "/frame_my_path.png",
+    "technologies": ["ReactJS", "Tailwind CSS"],
+    "github": "https://github.com/RoneyVaLo/frame-my-path",
+    "demo": "https://frame-my-path.vercel.app/"
+  },
+  {
+    "title": "CV Dinámico",
+    "description": "Editor de CV dinámico en React con internacionalización (react-i18next) y exportación a PDF mediante @react-pdf/renderer.",
+    "image": "/dynamic_cv.png",
+    "technologies": [
+      "ReactJS",
+      "Tailwind CSS",
+      "React-i18next",
+      "@React-pdf/renderer"
+    ],
+    "github": "https://github.com/RoneyVaLo/dynamic-cv",
+    "demo": "https://dynamic-cv-beta.vercel.app/"
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "Sitio web de portafolio personal con diseño moderno y responsivo",
+    "image": "/placeholder.svg?height=192&width=384",
+    "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"],
+    "github": "https://github.com",
+    "demo": "https://demo.com"
+  }
+]
