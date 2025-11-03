@@ -9,11 +9,11 @@ const Projects = () => {
   const [ref, isVisible] = useInView();
 
   return (
-    <section id="proyectos" ref={ref} className="bg-white py-20 md:py-32">
+    <section id="proyectos" ref={ref} className="bg-background py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <h2
           className={cn(
-            "mb-12 text-center font-raleway text-3xl font-bold text-[#333] md:text-4xl",
+            "mb-12 text-center code-font text-3xl font-bold text-foreground md:text-4xl",
             isVisible && "animate-fade-in-down"
           )}
         >
@@ -24,7 +24,7 @@ const Projects = () => {
             <div
               key={index}
               className={cn(
-                "bg-white text-[#020817] flex flex-col gap-6 rounded-xl border border-[#dadfe7] pb-6 shadow-sm",
+                "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border-2 border-accent pb-6 shadow-sm",
                 "overflow-hidden transition-all hover:shadow-lg",
                 isVisible && "animate-zoom-in animate-duration-700"
               )}
@@ -47,7 +47,7 @@ const Projects = () => {
                 <div className={cn("leading-none font-semibold code-font")}>
                   {project.title}
                 </div>
-                <div className={cn("text-[#778291] text-sm")}>
+                <div className={cn("text-muted-foreground text-sm")}>
                   {project.description}
                 </div>
               </div>
