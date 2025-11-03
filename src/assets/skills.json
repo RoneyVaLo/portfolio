@@ -1,21 +1,22 @@
 {
   "technicalSkills": [
-    { "name": "HTML/CSS", "level": 90 },
-    { "name": "JavaScript", "level": 85 },
-    { "name": "React", "level": 80 },
-    { "name": "Node.js", "level": 75 },
-    { "name": "TypeScript", "level": 70 },
-    { "name": "MongoDB", "level": 65 }
+    { "name": "HTML5 / CSS3 / TailwindCSS", "level": 90 },
+    { "name": "JavaScript (ES6+)", "level": 85 },
+    { "name": "ReactJS", "level": 80 },
+    { "name": "C# / ASP.NET Core", "level": 75 },
+    { "name": "Node.js", "level": 70 },
+    { "name": "PostgreSQL / SQL Server", "level": 70 },
+    { "name": "MongoDB", "level": 65 },
+    { "name": "Git / Control de versiones", "level": 85 },
+    { "name": "TypeScript", "level": 65 }
   ],
 
   "softSkills": [
     "Trabajo en equipo",
-    "Comunicación efectiva",
+    "Comunicación clara y empática",
     "Resolución de problemas",
-    "Gestión del tiempo",
-    "Adaptabilidad",
+    "Adaptabilidad ante nuevos retos",
     "Pensamiento crítico",
-    "Creatividad",
-    "Liderazgo"
+    "Aprendizaje continuo y mejora constante"
   ]
 }
