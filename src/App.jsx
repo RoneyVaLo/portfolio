@@ -4,11 +4,14 @@ import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import { Toaster } from "sonner";
+import Education from "./components/Education";
 
 const App = () => {
   return (
     <Layout>
-      <main className="min-h-screen bg-[#F0F0F0]">
+      <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <Hero />
 
@@ -20,7 +23,14 @@ const App = () => {
 
         {/* Skills Section */}
         <Skills />
+
+        {/* Education Section */}
+        <Education />
+
+        {/* Contact Section */}
+        <Contact />
       </main>
+      <Toaster />
     </Layout>
   );
 };
