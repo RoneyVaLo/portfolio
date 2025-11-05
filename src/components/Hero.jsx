@@ -61,18 +61,20 @@ const Hero = () => {
                 <a href="#proyectos">Ver mis proyectos</a>
               </button>
 
-              <button
-                className={cn(
-                  "inline-flex items-center justify-center rounded-md gap-2 whitespace-nowrap text-sm font-medium transition-all shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-                  "h-9 px-4 py-2",
-                  "bg-[#E67E22] hover:bg-[#E67E22]/90 text-white",
-                  "cursor-pointer",
-                  isVisible && "animate-fade-in-right animate-delay-700"
-                )}
-              >
-                <Download className="w-4 h-4" />
-                Descargar mi CV
-              </button>
+              <a href="/CV_Roney_Valdelomar.pdf" download>
+                <button
+                  className={cn(
+                    "inline-flex items-center justify-center rounded-md gap-2 whitespace-nowrap text-sm font-medium transition-all shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+                    "h-9 px-4 py-2",
+                    "bg-[#E67E22] hover:bg-[#E67E22]/90 text-white",
+                    "cursor-pointer",
+                    isVisible && "animate-fade-in-right animate-delay-700"
+                  )}
+                >
+                  <Download className="w-4 h-4" />
+                  Descargar mi CV
+                </button>
+              </a>
 
               <div
                 className={
@@ -92,7 +94,7 @@ const Hero = () => {
               )}
             >
               <img
-                src="/profile.png"
+                src="/profile.webp"
                 // src="/profile2.jpg"
                 alt="Foto de perfil"
                 className="object-cover"
