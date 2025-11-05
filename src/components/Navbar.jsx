@@ -7,7 +7,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [isDark, setIsDark] = useState(false);
+  const theme = localStorage.getItem("portfolioTheme");
+  const [isDark, setIsDark] = useState(theme === "dark");
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
@@ -21,6 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
+    localStorage.setItem("portfolioTheme", isDark ? "dark" : "light");
   }, [isDark]);
 
   return (
