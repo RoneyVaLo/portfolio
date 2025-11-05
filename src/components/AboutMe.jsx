@@ -24,7 +24,7 @@ const AboutMe = () => {
           Acerca de mí
         </h2>
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="flex justify-center">
+          <div className="flex h-full justify-center items-center">
             <div
               className={cn(
                 "relative h-96 w-80 overflow-hidden rounded-lg",
@@ -33,7 +33,7 @@ const AboutMe = () => {
               )}
             >
               <img
-                src="/profile2.jpg"
+                src="/profile2.webp"
                 alt="Foto profesional"
                 className="object-cover"
                 height={384}
