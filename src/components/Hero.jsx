@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="space-y-6">
             <h1
               className={cn(
-                "code-font text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl",
+                "code-font text-4xl font-bold tracking-tight text-foreground text-center md:text-start md:text-5xl lg:text-6xl",
                 isVisible && "animate-fade-in-right animate-delay-100"
               )}
             >
@@ -26,7 +26,7 @@ const Hero = () => {
             </h1>
             <p
               className={cn(
-                "text-xl text-foreground/80",
+                "text-xl text-foreground/80 text-center md:text-start",
                 isVisible && "animate-fade-in-right animate-delay-300"
               )}
             >
@@ -48,7 +48,7 @@ const Hero = () => {
               rendimiento, mantener un código limpio, y garantizar una UX
               intuitiva.
             </p>
-            <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-col md:flex-row gap-6 items-center">
               <button
                 className={cn(
                   "inline-flex items-center justify-center rounded-md gap-2 whitespace-nowrap text-sm font-medium transition-all shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
@@ -85,10 +85,10 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center order-first md:order-last">
             <div
               className={cn(
-                "relative h-90 w-90 overflow-hidden rounded-full border-4 border-[#3498DB]",
+                "relative h-78 w-78 md:h-90 md:w-90 overflow-hidden rounded-full border-4 border-[#3498DB]",
                 isVisible &&
                   "animate-flip-in-x animate-delay-300 animate-duration-800"
               )}

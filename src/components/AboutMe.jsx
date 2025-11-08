@@ -27,7 +27,7 @@ const AboutMe = () => {
           <div className="flex h-full justify-center items-center">
             <div
               className={cn(
-                "relative h-96 w-80 overflow-hidden rounded-lg",
+                "relative overflow-hidden rounded-lg",
                 isVisible &&
                   "animate-pulse-fade-in animate-delay-300 animate-duration-1000"
               )}
