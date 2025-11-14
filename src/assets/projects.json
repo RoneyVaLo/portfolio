@@ -9,11 +9,19 @@
   },
   {
     "title": "Galeria de Logros",
-    "description": "Una colección de logros y certificaciones",
+    "description": "Galería interactiva para organizar y exhibir certificaciones profesionales con diseño moderno, filtrado por institución, paginación elegante y soporte de tema claro/oscuro.",
     "image": "/frame_my_path.webp",
-    "technologies": ["ReactJS", "Tailwind CSS"],
+    "technologies": ["ReactJS", "Vite", "Tailwind CSS", "Lucide React"],
     "github": "https://github.com/RoneyVaLo/frame-my-path",
     "demo": "https://frame-my-path.vercel.app/"
+  },
+  {
+    "title": "Bingo Navideño Familiar",
+    "description": "Aplicación web interactiva de Bingo Navideño con diseño festivo, animaciones, generación aleatoria de palabras temáticas y un historial visual para disfrutar en familia durante la temporada navideña.",
+    "image": "/christmas_bingo.webp",
+    "technologies": ["HTML5", "CSS3", "JavaScript (Vanilla)", "JSON"],
+    "github": "https://github.com/RoneyVaLo/bingo-navidad",
+    "demo": "https://roneyvalo.github.io/bingo-navidad/"
   },
   {
     "title": "CV Dinámico",
