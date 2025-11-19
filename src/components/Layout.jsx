@@ -1,7 +1,21 @@
-import { Menu } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      const el = document.getElementById(id);
+
+      if (el) {
+        el.scrollIntoView({ behavior: "auto" });
+      }
+    }
+  }, [i18n.language]);
+
   return (
     <div>
       <header className="sticky top-0 z-50 bg-background shadow-sm border-b-2 border-foreground/30 animate-fade-in-down">
@@ -10,9 +24,9 @@ const Layout = ({ children }) => {
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3498DB] text-xl font-bold text-white">
               RV
             </div>
-            <span className="hidden text-xl font-bold text-foreground sm:inline-block">
+            {/* <span className="hidden text-xl font-bold text-foreground sm:inline-block">
               Mi Portafolio
-            </span>
+            </span> */}
           </a>
           <Navbar />
         </div>

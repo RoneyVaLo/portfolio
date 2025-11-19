@@ -1,31 +1,27 @@
 [
   {
-    "title": "Portal Docente",
-    "description": "Aplicación full-stack para la gestión de la evaluación académica, desarrollada para CTP Los Chiles como proyecto de graduación",
+    "id": "portal-docente",
     "image": "admin_docente.webp",
     "technologies": ["ReactJS", "Tailwind CSS", "ASP.NET Core", "PostreSQL"],
     "github": "https://github.com/RoneyVaLo/ctp-docente-portal",
     "demo": "https://ctp-docente-portal.onrender.com/"
   },
   {
-    "title": "Galeria de Logros",
-    "description": "Galería interactiva para organizar y exhibir certificaciones profesionales con diseño moderno, filtrado por institución, paginación elegante y soporte de tema claro/oscuro.",
+    "id": "galeria-logros",
     "image": "/frame_my_path.webp",
     "technologies": ["ReactJS", "Vite", "Tailwind CSS", "Lucide React"],
     "github": "https://github.com/RoneyVaLo/frame-my-path",
     "demo": "https://frame-my-path.vercel.app/"
   },
   {
-    "title": "Bingo Navideño Familiar",
-    "description": "Aplicación web interactiva de Bingo Navideño con diseño festivo, animaciones, generación aleatoria de palabras temáticas y un historial visual para disfrutar en familia durante la temporada navideña.",
+    "id": "bingo-navidad",
     "image": "/christmas_bingo.webp",
     "technologies": ["HTML5", "CSS3", "JavaScript (Vanilla)", "JSON"],
     "github": "https://github.com/RoneyVaLo/bingo-navidad",
     "demo": "https://roneyvalo.github.io/bingo-navidad/"
   },
   {
-    "title": "CV Dinámico",
-    "description": "Editor de CV dinámico en React con internacionalización (react-i18next) y exportación a PDF mediante @react-pdf/renderer.",
+    "id": "cv-dinamico",
     "image": "/dynamic_cv.webp",
     "technologies": [
       "ReactJS",

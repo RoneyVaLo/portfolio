@@ -1,17 +1,16 @@
 import skillsData from "../assets/skills.json";
 import { cn } from "../utils/cn";
 import { useInView } from "../hooks/useInView";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
   const [ref, isVisible] = useInView();
-  const { softSkills, technicalSkills } = skillsData;
+  const { t } = useTranslation("skills");
+  const { technicalSkills } = skillsData;
+  const softSkills = t("soft-skills", { returnObjects: true });
 
   return (
-    <section
-      id="habilidades"
-      ref={ref}
-      className="bg-foreground/10 py-20 md:py-32"
-    >
+    <section id="skills" ref={ref} className="bg-foreground/10 py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <h2
           className={cn(
@@ -19,7 +18,7 @@ const Skills = () => {
             isVisible && "animate-fade-in-down"
           )}
         >
-          Mis Habilidades
+          {t("title")}
         </h2>
         <div className="grid gap-12">
           {/* Primera fila: Habilidades Técnicas y Blandas */}
@@ -31,7 +30,7 @@ const Skills = () => {
                   isVisible && "animate-fade-in-right"
                 )}
               >
-                Habilidades Técnicas
+                {t("technical-skills-title")}
               </h3>
               <div className="space-y-4">
                 {technicalSkills
@@ -83,24 +82,25 @@ const Skills = () => {
                   isVisible && "animate-fade-in-left"
                 )}
               >
-                Habilidades Blandas
+                {t("soft-skills-title")}
               </h3>
               <ul className="grid gap-3 sm:grid-cols-2">
-                {softSkills.map((skill, index) => (
-                  <li
-                    key={index}
-                    className={cn(
-                      "flex items-center space-x-2",
-                      isVisible && "animate-fade-in-down"
-                    )}
-                    style={{
-                      animationDelay: `${index * 200}ms`, // cada elemento 200ms más tarde
-                    }}
-                  >
-                    <div className="h-2 w-2 rounded-full bg-[#E67E22]" />
-                    <span className="text-foreground">{skill}</span>
-                  </li>
-                ))}
+                {Array.isArray(softSkills) &&
+                  softSkills.map((skill, index) => (
+                    <li
+                      key={index}
+                      className={cn(
+                        "flex items-center space-x-2",
+                        isVisible && "animate-fade-in-down"
+                      )}
+                      style={{
+                        animationDelay: `${index * 200}ms`, // cada elemento 200ms más tarde
+                      }}
+                    >
+                      <div className="h-2 w-2 rounded-full bg-[#E67E22]" />
+                      <span className="text-foreground">{skill}</span>
+                    </li>
+                  ))}
               </ul>
             </div>
           </div>

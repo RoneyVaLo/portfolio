@@ -5,9 +5,11 @@ import SocialMedia from "./SocialMedia";
 import { cn } from "../utils/cn";
 import { toast } from "sonner";
 import { useInView } from "../hooks/useInView";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const [ref, isVisible] = useInView();
+  const { t } = useTranslation("contact");
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
   const [errors, setErrors] = useState({
@@ -19,15 +21,17 @@ const Contact = () => {
 
   const validate = (data) => {
     const newErrors = {};
-    if (!data.from_name.trim())
-      newErrors.from_name = "El nombre es obligatorio.";
-    if (!data.from_email.trim())
-      newErrors.from_email = "El email es obligatorio.";
-    else if (!/\S+@\S+\.\S+/.test(data.from_email))
-      newErrors.from_email = "Introduce un email válido.";
-    if (!data.subject.trim()) newErrors.subject = "El asunto es obligatorio.";
-    if (!data.message.trim())
-      newErrors.message = "El mensaje no puede estar vacío.";
+    if (!data.from_name.trim()) newErrors.from_name = "errors.nameRequired";
+
+    if (!data.from_email.trim()) {
+      newErrors.from_email = "errors.emailRequired";
+    } else if (!/\S+@\S+\.\S+/.test(data.from_email)) {
+      newErrors.from_email = "errors.emailInvalid";
+    }
+
+    if (!data.subject.trim()) newErrors.subject = "errors.subjectRequired";
+
+    if (!data.message.trim()) newErrors.message = "errors.messageRequired";
     return newErrors;
   };
 
@@ -48,7 +52,7 @@ const Contact = () => {
     const validationErrors = validate(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      toast.error("Por favor corrige los errores antes de enviar.");
+      toast.error(t("toast.fixErrors"));
       return;
     }
 
@@ -63,12 +67,12 @@ const Contact = () => {
       )
       .then(
         () => {
-          toast.success("Mensaje enviado correctamente 🎉");
+          toast.success(t("toast.success"));
           form.current.reset();
         },
         (error) => {
           console.error(error);
-          toast.error("Error al enviar el mensaje 😢");
+          toast.error(t("toast.error"));
         }
       )
       .finally(() => {
@@ -78,7 +82,7 @@ const Contact = () => {
 
   return (
     <section
-      id="contacto"
+      id="contact"
       ref={ref}
       className="bg-foreground/10 py-20 text-foreground md:py-32"
     >
@@ -89,7 +93,7 @@ const Contact = () => {
             isVisible && "animate-fade-in-down animate-duration-1000"
           )}
         >
-          Contáctame
+          {t("sectionTitle")}
         </h2>
         <div className="grid gap-8 md:grid-cols-2">
           <div className="space-y-6">
@@ -99,8 +103,7 @@ const Contact = () => {
                 isVisible && "animate-fade-in-right animate-delay-100"
               )}
             >
-              ¿Tienes una idea, un reto o un proyecto que necesita traducción
-              digital?
+              {t("headline")}
             </h3>
             <p
               className={cn(
@@ -108,9 +111,7 @@ const Contact = () => {
                 isVisible && "animate-fade-in-right animate-delay-300"
               )}
             >
-              Estoy interesado en colaboraciones freelance o en integrarme a
-              equipos innovadores donde aportar desde el desarrollo hasta la
-              ejecución técnica.
+              {t("paragraph1")}
             </p>
             <p
               className={cn(
@@ -118,9 +119,7 @@ const Contact = () => {
                 isVisible && "animate-fade-in-right animate-delay-500"
               )}
             >
-              Si estás buscando a alguien que combine técnica sólida, capacidad
-              de aprendizaje y visión práctica de producto, estaré encantado de
-              conversar contigo.
+              {t("paragraph2")}
             </p>
             <div className="space-y-4">
               <div
@@ -151,7 +150,7 @@ const Contact = () => {
                         "animate-fade-in animate-duration-1000 animate-delay-100"
                     )}
                   >
-                    Nombre
+                    {t("nameLabel")}
                   </label>
                   <input
                     id="name"
@@ -162,10 +161,12 @@ const Contact = () => {
                       errors.from_name ? "border-red-500" : "border-white/10",
                       isVisible && "animate-flip-in-y animate-delay-200"
                     )}
-                    placeholder="Tu nombre"
+                    placeholder={t("namePlaceholder")}
                   />
                   {errors.from_name && (
-                    <p className="text-xs text-red-400">{errors.from_name}</p>
+                    <p className="text-xs text-red-400">
+                      {t(errors.from_name)}
+                    </p>
                   )}
                 </div>
 
@@ -178,7 +179,7 @@ const Contact = () => {
                         "animate-fade-in animate-duration-1000 animate-delay-200"
                     )}
                   >
-                    Email
+                    {t("emailLabel")}
                   </label>
                   <input
                     id="email"
@@ -190,10 +191,12 @@ const Contact = () => {
                       errors.from_email ? "border-red-500" : "border-white/10",
                       isVisible && "animate-flip-in-y animate-delay-400"
                     )}
-                    placeholder="tu@email.com"
+                    placeholder={t("emailPlaceholder")}
                   />
                   {errors.from_email && (
-                    <p className="text-xs text-red-400">{errors.from_email}</p>
+                    <p className="text-xs text-red-400">
+                      {t(errors.from_email)}
+                    </p>
                   )}
                 </div>
               </div>
@@ -207,7 +210,7 @@ const Contact = () => {
                       "animate-fade-in animate-duration-1000 animate-delay-400"
                   )}
                 >
-                  Asunto
+                  {t("subjectLabel")}
                 </label>
                 <input
                   id="subject"
@@ -218,10 +221,10 @@ const Contact = () => {
                     errors.subject ? "border-red-500" : "border-white/10",
                     isVisible && "animate-flip-in-y animate-delay-500"
                   )}
-                  placeholder="Asunto del mensaje"
+                  placeholder={t("subjectPlaceholder")}
                 />
                 {errors.subject && (
-                  <p className="text-xs text-red-400">{errors.subject}</p>
+                  <p className="text-xs text-red-400">{t(errors.subject)}</p>
                 )}
               </div>
 
@@ -234,7 +237,7 @@ const Contact = () => {
                       "animate-fade-in animate-duration-1000 animate-delay-700"
                   )}
                 >
-                  Mensaje
+                  {t("messageLabel")}
                 </label>
                 <textarea
                   id="message"
@@ -247,10 +250,10 @@ const Contact = () => {
                     isVisible &&
                       "animate-flip-in-y animate-delay-700 animate-duration-1000"
                   )}
-                  placeholder="Tu mensaje"
+                  placeholder={t("messagePlaceholder")}
                 />
                 {errors.message && (
-                  <p className="text-xs text-red-400">{errors.message}</p>
+                  <p className="text-xs text-red-400">{t(errors.message)}</p>
                 )}
               </div>
               <button
@@ -264,7 +267,7 @@ const Contact = () => {
                     "animate-slide-up-fade animate-delay-900 animate-duration-1000"
                 )}
               >
-                {isSending ? "Enviando..." : "Enviar mensaje"}
+                {isSending ? t("buttonSending") : t("buttonSend")}
               </button>
             </form>
           </div>

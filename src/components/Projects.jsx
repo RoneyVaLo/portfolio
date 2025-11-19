@@ -4,12 +4,14 @@ import { Github } from "lucide-react";
 import { ExternalLink } from "lucide-react";
 import projects from "../assets/projects.json";
 import { useInView } from "../hooks/useInView";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
   const [ref, isVisible] = useInView();
+  const { t } = useTranslation("projects");
 
   return (
-    <section id="proyectos" ref={ref} className="bg-background py-20 md:py-32">
+    <section id="projects" ref={ref} className="bg-background py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <h2
           className={cn(
@@ -17,12 +19,12 @@ const Projects = () => {
             isVisible && "animate-fade-in-down"
           )}
         >
-          Mis Proyectos
+          {t("title")}
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
-              key={index}
+              key={project.id}
               className={cn(
                 "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border-2 border-accent pb-6 shadow-sm",
                 "overflow-hidden transition-all hover:shadow-lg",
@@ -35,7 +37,7 @@ const Projects = () => {
               <div className="relative h-52 w-full">
                 <img
                   src={project.image || "/placeholder.svg"}
-                  alt={project.title}
+                  alt={t(`${project.id}.title`)}
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
@@ -45,10 +47,10 @@ const Projects = () => {
                 )}
               >
                 <div className={cn("leading-none font-semibold code-font")}>
-                  {project.title}
+                  {t(`${project.id}.title`)}
                 </div>
                 <div className={cn("text-muted-foreground text-sm")}>
-                  {project.description}
+                  {t(`${project.id}.description`)}
                 </div>
               </div>
               <div className={cn("px-6")}>

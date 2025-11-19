@@ -9,14 +9,5 @@
     { "name": "MongoDB", "level": 65 },
     { "name": "Git / Control de versiones", "level": 85 },
     { "name": "TypeScript", "level": 65 }
-  ],
-
-  "softSkills": [
-    "Trabajo en equipo",
-    "Comunicación clara y empática",
-    "Resolución de problemas",
-    "Adaptabilidad ante nuevos retos",
-    "Pensamiento crítico",
-    "Aprendizaje continuo y mejora constante"
   ]
 }

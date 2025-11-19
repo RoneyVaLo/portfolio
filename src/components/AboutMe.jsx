@@ -1,16 +1,17 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import { cn } from "../utils/cn";
-import { Linkedin } from "lucide-react";
-import { Github } from "lucide-react";
 import { useInView } from "../hooks/useInView";
 import SocialMedia from "./SocialMedia";
 
 const AboutMe = () => {
+  const { t } = useTranslation("about");
   const [ref, isVisible] = useInView();
+
+  const description = t("description", { returnObjects: true });
 
   return (
     <section
-      id="acerca-de-mi"
+      id="about-me"
       ref={ref}
       className="bg-foreground/10 py-20 md:py-24"
     >
@@ -21,7 +22,7 @@ const AboutMe = () => {
             isVisible && "animate-fade-in-left"
           )}
         >
-          Acerca de mí
+          {t("title")}
         </h2>
         <div className="grid gap-8 md:grid-cols-2">
           <div className="flex h-full justify-center items-center">
@@ -48,9 +49,23 @@ const AboutMe = () => {
                 isVisible && "animate-fade-in-left animate-delay-300"
               )}
             >
-              Mi historia
+              {t("title")}
             </h3>
-            <p
+
+            {Array.isArray(description) &&
+              description.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={cn(
+                    "text-lg text-foreground/80 text-justify text-balance",
+                    isVisible && "animate-fade-in-left animate-delay-400"
+                  )}
+                >
+                  {paragraph}
+                </p>
+              ))}
+
+            {/* <p
               className={cn(
                 "text-lg text-foreground/80 text-justify text-balance",
                 isVisible && "animate-fade-in-left animate-delay-400"
@@ -79,7 +94,7 @@ const AboutMe = () => {
               seguir colaborando en entornos donde pueda aportar no solo
               técnica, sino visión y responsabilidad en la entrega de productos
               digitales.
-            </p>
+            </p> */}
             <div
               className={cn(
                 "flex space-x-4 pt-4",

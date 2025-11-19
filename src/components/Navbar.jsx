@@ -1,8 +1,5 @@
-import { Menu } from "lucide-react";
-import { Moon } from "lucide-react";
-import { X } from "lucide-react";
-import { Sun } from "lucide-react";
-import React from "react";
+import { useTranslation } from "react-i18next";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -10,15 +7,14 @@ const Navbar = () => {
   const theme = localStorage.getItem("portfolioTheme");
   const [isDark, setIsDark] = useState(theme === "dark");
   const [isOpen, setIsOpen] = useState(false);
+  const { t, i18n } = useTranslation("navbar");
 
-  const links = [
-    "inicio",
-    "acerca-de-mi",
-    "proyectos",
-    "habilidades",
-    "educacion",
-    "contacto",
-  ];
+  const links = t("links", { returnObjects: true });
+
+  const changeLang = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("portfolioLang", lang);
+  };
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
@@ -43,16 +39,34 @@ const Navbar = () => {
               )}
             </button>
           </li>
-          {links.map((item) => (
-            <li key={item}>
-              <a
-                href={`#${item}`}
-                className="text-foreground transition-colors hover:text-[#3498DB] capitalize"
-              >
-                {item.replace(/-/g, " ")}
-              </a>
-            </li>
-          ))}
+          {Array.isArray(links) &&
+            links.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={`#${item.id}`}
+                  className="text-foreground transition-colors hover:text-[#3498DB] capitalize"
+                >
+                  {t(item.name).replace(/-/g, " ")}
+                </a>
+              </li>
+            ))}
+
+          {/* SELECTOR IDIOMA */}
+          <li className="flex space-x-2 items-center">
+            <button
+              onClick={() => changeLang("es")}
+              className="text-foreground transition-colors hover:text-[#3498DB] capitalize cursor-pointer"
+            >
+              {t("lang_es")}
+            </button>
+            <span className="text-foreground">|</span>
+            <button
+              onClick={() => changeLang("en")}
+              className="text-foreground transition-colors hover:text-[#3498DB] capitalize cursor-pointer"
+            >
+              {t("lang_en")}
+            </button>
+          </li>
         </ul>
       </nav>
 
@@ -79,17 +93,35 @@ const Navbar = () => {
                   {isDark ? <Sun /> : <Moon />}
                 </button>
               </li>
-              {links.map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item}`}
-                    className="text-lg transition-colors hover:text-[#3498DB] capitalize"
-                    onClick={() => setIsOpen(false)} // cerrar menú al hacer clic
-                  >
-                    {item.replace(/-/g, " ")}
-                  </a>
-                </li>
-              ))}
+              {Array.isArray(links) &&
+                links.map((item) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      className="text-lg transition-colors hover:text-[#3498DB] capitalize"
+                      onClick={() => setIsOpen(false)} // cerrar menú al hacer clic
+                    >
+                      {t(item.name).replace(/-/g, " ")}
+                    </a>
+                  </li>
+                ))}
+
+              {/* SELECTOR IDIOMA */}
+              <li className="flex space-x-4">
+                <button
+                  onClick={() => changeLang("es")}
+                  className="text-lg hover:text-[#3498DB] transition"
+                >
+                  {t("lang_es")}
+                </button>
+                <span className="text-foreground">|</span>
+                <button
+                  onClick={() => changeLang("en")}
+                  className="text-lg hover:text-[#3498DB] transition"
+                >
+                  {t("lang_en")}
+                </button>
+              </li>
             </ul>
           </div>
         )}

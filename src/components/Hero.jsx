@@ -3,13 +3,17 @@ import { cn } from "../utils/cn";
 import { useInView } from "../hooks/useInView";
 import { Download } from "lucide-react";
 import SocialMedia from "./SocialMedia";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
   const [ref, isVisible] = useInView();
+  const { t, i18n } = useTranslation("hero");
+
+  console.log(i18n.language);
 
   return (
     <section
-      id="inicio"
+      id="home"
       ref={ref}
       className="relative bg-background py-20 md:py-32"
     >
@@ -22,7 +26,7 @@ const Hero = () => {
                 isVisible && "animate-fade-in-right animate-delay-100"
               )}
             >
-              Ingeniero de Software con Visión de Impacto
+              {t("title")}
             </h1>
             <p
               className={cn(
@@ -30,7 +34,7 @@ const Hero = () => {
                 isVisible && "animate-fade-in-right animate-delay-300"
               )}
             >
-              Construyendo experiencias digitales que cuentan
+              {t("subtitle")}
             </p>
             <p
               className={cn(
@@ -38,15 +42,7 @@ const Hero = () => {
                 isVisible && "animate-fade-in-right animate-delay-400"
               )}
             >
-              Soy un ingeniero de software que combina pasión por la tecnología
-              con un claro enfoque en la funcionalidad y la experiencia de
-              usuario. A lo largo de mi trayectoria he diseñado y desarrollado
-              aplicaciones web completas —desde el frontend hasta el backend—
-              empleando tecnologías modernas (como React, Node/ASP.NET, bases de
-              datos relacionales y no relacionales). Me motiva convertir ideas
-              en soluciones tangibles. En cada proyecto mi meta es: escalar con
-              rendimiento, mantener un código limpio, y garantizar una UX
-              intuitiva.
+              {t("description")}
             </p>
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <button
@@ -58,10 +54,17 @@ const Hero = () => {
                   isVisible && "animate-fade-in-right animate-delay-800"
                 )}
               >
-                <a href="#proyectos">Ver mis proyectos</a>
+                <a href="#proyectos">{t("btn-projects")}</a>
               </button>
 
-              <a href="/CV_Roney_Valdelomar.pdf" download>
+              <a
+                href={
+                  i18n.language === "es"
+                    ? "/CV_Roney_Valdelomar.pdf"
+                    : "/CV_Roney_Valdelomar_en.pdf"
+                }
+                download
+              >
                 <button
                   className={cn(
                     "inline-flex items-center justify-center rounded-md gap-2 whitespace-nowrap text-sm font-medium transition-all shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
@@ -72,7 +75,7 @@ const Hero = () => {
                   )}
                 >
                   <Download className="w-4 h-4" />
-                  Descargar mi CV
+                  {t("btn-cv")}
                 </button>
               </a>
 
