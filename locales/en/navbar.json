@@ -1,0 +1,12 @@
+{
+  "links": [
+    { "id": "home", "name": "home" },
+    { "id": "about-me", "name": "about-me" },
+    { "id": "projects", "name": "projects" },
+    { "id": "skills", "name": "skills" },
+    { "id": "education", "name": "education" },
+    { "id": "contact", "name": "contact" }
+  ],
+  "lang_es": "ES",
+  "lang_en": "EN"
+}

@@ -1,0 +1,53 @@
+{
+  "sectionTitle": "Education and Certifications",
+  "list": [
+    {
+      "id": 1,
+      "title": "Bachelor's degree in Software Engineering",
+      "institution": "Universidad Técnica Nacional",
+      "year": "2025"
+    },
+    {
+      "id": 2,
+      "title": "English for Work Program Modules 1 and 2",
+      "institution": "Universidad Técnica Nacional",
+      "year": "2025"
+    },
+    {
+      "id": 3,
+      "title": "Information and Communication Technologies Operator",
+      "institution": "Instituto Nacional de Aprendizaje",
+      "year": "2024"
+    },
+    {
+      "id": 4,
+      "title": "Data Handling with SQL",
+      "institution": "Instituto Nacional de Aprendizaje",
+      "year": "2024"
+    },
+    {
+      "id": 5,
+      "title": "Introduction to Cybersecurity",
+      "institution": "Cisco Networking Academy",
+      "year": "2024"
+    },
+    {
+      "id": 6,
+      "title": "JavaScript Essentials 1",
+      "institution": "Cisco Networking Academy",
+      "year": "2024"
+    },
+    {
+      "id": 7,
+      "title": "Python Essentials 1",
+      "institution": "Cisco Networking Academy",
+      "year": "2024"
+    },
+    {
+      "id": 8,
+      "title": "Python Essentials 2",
+      "institution": "Cisco Networking Academy",
+      "year": "2025"
+    }
+  ]
+}

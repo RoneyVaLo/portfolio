@@ -1,0 +1,28 @@
+{
+  "sectionTitle": "Contact Me",
+  "headline": "Do you have an idea, a challenge, or a project that needs digital transformation?",
+  "paragraph1": "I'm interested in freelance collaborations or joining innovative teams where I can contribute from development to technical execution.",
+  "paragraph2": "If you are looking for someone who combines solid technical skills, fast learning, and a practical product-oriented mindset, I’d be happy to talk with you.",
+  "nameLabel": "Name",
+  "namePlaceholder": "Your name",
+  "emailLabel": "Email",
+  "emailPlaceholder": "youremail@example.com",
+  "subjectLabel": "Subject",
+  "subjectPlaceholder": "Message subject",
+  "messageLabel": "Message",
+  "messagePlaceholder": "Your message",
+  "buttonSend": "Send message",
+  "buttonSending": "Sending...",
+  "errors": {
+    "nameRequired": "Name is required.",
+    "emailRequired": "Email is required.",
+    "emailInvalid": "Enter a valid email address.",
+    "subjectRequired": "Subject is required.",
+    "messageRequired": "Message cannot be empty."
+  },
+  "toast": {
+    "success": "Message sent successfully 🎉",
+    "error": "Error sending the message 😢",
+    "fixErrors": "Please fix the errors before sending."
+  }
+}

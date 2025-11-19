@@ -1,0 +1,53 @@
+{
+  "sectionTitle": "Educación y Certificaciones",
+  "list": [
+    {
+      "id": 1,
+      "title": "Bachillerato en Ingeniería de Software",
+      "institution": "Universidad Técnica Nacional",
+      "year": "2025"
+    },
+    {
+      "id": 2,
+      "title": "Programa de Inglés para el Trabajo Módulos 1 y 2",
+      "institution": "Universidad Técnica Nacional",
+      "year": "2025"
+    },
+    {
+      "id": 3,
+      "title": "Operador de Tecnologías de la Información y Comunicación",
+      "institution": "Instituto Nacional de Aprendizaje",
+      "year": "2024"
+    },
+    {
+      "id": 4,
+      "title": "Manipulación de Datos con SQL",
+      "institution": "Instituto Nacional de Aprendizaje",
+      "year": "2024"
+    },
+    {
+      "id": 5,
+      "title": "Introducción a la Seguridad Cibernética",
+      "institution": "Cisco Networking Academy",
+      "year": "2024"
+    },
+    {
+      "id": 6,
+      "title": "JavaScript Essentials 1",
+      "institution": "Cisco Networking Academy",
+      "year": "2024"
+    },
+    {
+      "id": 7,
+      "title": "Python Essentials 1",
+      "institution": "Cisco Networking Academy",
+      "year": "2024"
+    },
+    {
+      "id": 8,
+      "title": "Python Essentials 2",
+      "institution": "Cisco Networking Academy",
+      "year": "2025"
+    }
+  ]
+}

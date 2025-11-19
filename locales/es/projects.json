@@ -1,0 +1,23 @@
+{
+  "title": "Mis Proyectos",
+
+  "portal-docente": {
+    "title": "Portal Docente",
+    "description": "Aplicación full-stack para la gestión de la evaluación académica, desarrollada para CTP Los Chiles como proyecto de graduación."
+  },
+
+  "galeria-logros": {
+    "title": "Galería de Logros",
+    "description": "Galería interactiva para organizar y exhibir certificaciones profesionales con diseño moderno, filtrado por institución, paginación elegante y soporte de tema claro/oscuro."
+  },
+
+  "bingo-navidad": {
+    "title": "Bingo Navideño Familiar",
+    "description": "Aplicación web interactiva con diseño festivo, animaciones, generación aleatoria de palabras temáticas y un historial visual navideño."
+  },
+
+  "cv-dinamico": {
+    "title": "CV Dinámico",
+    "description": "Editor de CV dinámico en React con internacionalización y exportación a PDF mediante @react-pdf/renderer."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "sectionTitle": "Contáctame",
+  "headline": "¿Tienes una idea, un reto o un proyecto que necesita traducción digital?",
+  "paragraph1": "Estoy interesado en colaboraciones freelance o en integrarme a equipos innovadores donde aportar desde el desarrollo hasta la ejecución técnica.",
+  "paragraph2": "Si estás buscando a alguien que combine técnica sólida, capacidad de aprendizaje y visión práctica de producto, estaré encantado de conversar contigo.",
+  "nameLabel": "Nombre",
+  "namePlaceholder": "Tu nombre",
+  "emailLabel": "Email",
+  "emailPlaceholder": "tucorreo@email.com",
+  "subjectLabel": "Asunto",
+  "subjectPlaceholder": "Asunto del mensaje",
+  "messageLabel": "Mensaje",
+  "messagePlaceholder": "Tu mensaje",
+  "buttonSend": "Enviar mensaje",
+  "buttonSending": "Enviando...",
+  "errors": {
+    "nameRequired": "El nombre es obligatorio.",
+    "emailRequired": "El email es obligatorio.",
+    "emailInvalid": "Introduce un email válido.",
+    "subjectRequired": "El asunto es obligatorio.",
+    "messageRequired": "El mensaje no puede estar vacío."
+  },
+  "toast": {
+    "success": "Mensaje enviado correctamente 🎉",
+    "error": "Error al enviar el mensaje 😢",
+    "fixErrors": "Por favor corrige los errores antes de enviar."
+  }
+}

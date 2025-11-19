@@ -1,0 +1,23 @@
+{
+  "title": "My Projects",
+
+  "portal-docente": {
+    "title": "Teacher Portal",
+    "description": "Full-stack academic evaluation system developed for CTP Los Chiles as a graduation project."
+  },
+
+  "galeria-logros": {
+    "title": "Achievements Gallery",
+    "description": "Interactive gallery to organize and display professional certifications with filtering, pagination and light/dark mode."
+  },
+
+  "bingo-navidad": {
+    "title": "Family Christmas Bingo",
+    "description": "Interactive Christmas-themed bingo app with animations, random word generation and a visual history tracker."
+  },
+
+  "cv-dinamico": {
+    "title": "Dynamic Resume",
+    "description": "Dynamic resume editor built with React, featuring internationalization and PDF export support."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "links": [
+    { "id": "home", "name": "inicio" },
+    { "id": "about-me", "name": "acerca-de-mí" },
+    { "id": "projects", "name": "proyectos" },
+    { "id": "skills", "name": "habilidades" },
+    { "id": "education", "name": "educación" },
+    { "id": "contact", "name": "contacto" }
+  ],
+  "lang_es": "ES",
+  "lang_en": "EN"
+}
