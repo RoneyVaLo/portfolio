@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 import { cn } from "../utils/cn";
 import { useInView } from "../hooks/useInView";
 import { Download } from "lucide-react";
@@ -9,6 +10,24 @@ const Hero = () => {
   const [ref, isVisible] = useInView();
   const { t, i18n } = useTranslation("hero");
 
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const roles = [...t("roles", { returnObjects: true })];
+    const typed = new Typed(typedRef.current, {
+      strings: roles,
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1000,
+      startDelay: 300,
+      loop: true,
+      smartBackspace: false,
+    });
+
+    return () => typed.destroy();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i18n.language]); // se reinicia cuando cambia el idioma
+
   return (
     <section
       id="home"
@@ -18,25 +37,50 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div className="space-y-6">
-            <h1
-              className={cn(
-                "code-font text-4xl font-bold tracking-tight text-foreground text-center md:text-start md:text-5xl lg:text-6xl",
-                isVisible && "animate-fade-in-right animate-delay-100"
-              )}
-            >
-              {t("title")} <span class="text-[#3498DB]">Roney Valdelomar</span>
-            </h1>
+            <div>
+              <h2
+                className={cn(
+                  "code-font text-3xl font-bold tracking-tight text-foreground text-center md:text-start md:text-4xl lg:text-5xl",
+                  isVisible && "animate-fade-in-right animate-delay-100"
+                )}
+              >
+                {t("title")}
+              </h2>
+              <h1
+                className={cn(
+                  "code-font text-4xl font-bold tracking-tight text-foreground text-center md:text-start md:text-5xl lg:text-6xl",
+                  isVisible && "animate-fade-in-right animate-delay-100",
+                  "text-[#3498DB]"
+                )}
+              >
+                Roney Valdelomar
+              </h1>
+            </div>
             <p
               className={cn(
-                "text-xl text-foreground/80 text-center md:text-start",
+                "text-center md:text-start text-[#3498DB]",
                 isVisible && "animate-fade-in-right animate-delay-300"
               )}
             >
-              {t("subtitle")}
+              <span
+                className={cn(
+                  "text-2xl tracking-tight text-foreground text-center md:text-start",
+                  isVisible && "animate-fade-in-right animate-delay-100"
+                )}
+              >
+                {t("subtitle")}
+              </span>
+              <span
+                ref={typedRef}
+                className={cn(
+                  "text-2xl font-bold tracking-tight text-center md:text-start",
+                  isVisible && "animate-fade-in-right animate-delay-300"
+                )}
+              ></span>
             </p>
             <p
               className={cn(
-                "text-lg text-justify text-pretty text-foreground/70",
+                "text-lg text-center md:text-start text-pretty text-foreground/70",
                 isVisible && "animate-fade-in-right animate-delay-400"
               )}
             >

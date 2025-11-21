@@ -1,7 +1,13 @@
 {
-  "title": "Hello, I'm",
-  "subtitle": "Software Engineer with an Impactful Vision",
-  "description": "I'm a software engineer who combines a passion for technology with a strong focus on functionality and user experience. Throughout my career, I've designed and developed complete web applications; from frontend to backend, using modern technologies (such as React, Node/ASP.NET, and relational and non-relational databases). I'm driven by turning ideas into tangible solutions. In every project, my goal is to scale with performance, maintain clean code, and ensure an intuitive UX.",
+  "title": "Hello It's me",
+  "subtitle": "And I'm a ",
+  "roles": [
+    "Software Engineer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Fullstack Developer"
+  ],
+  "description": "I combine my passion for technology with a strong focus on functionality and user experience. I use modern technologies such as; React, Node/ASP.NET, and relational and non-relational databases. I'm driven by turning ideas into tangible solutions. In every project, my goal is to scale with performance, maintain clean code, and ensure an intuitive UX.",
   "btn-projects": "View my projects",
   "btn-cv": "Download my CV"
 }

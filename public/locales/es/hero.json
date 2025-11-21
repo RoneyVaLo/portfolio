@@ -1,7 +1,13 @@
 {
-  "title": "Hola, soy",
-  "subtitle": "Ingeniero de Software con Visión de Impacto",
-  "description": "Soy un ingeniero de software que combina pasión por la tecnología con un claro enfoque en la funcionalidad y la experiencia de usuario. A lo largo de mi trayectoria he diseñado y desarrollado aplicaciones web completas; desde el frontend hasta el backend, empleando tecnologías modernas (como React, Node/ASP.NET, bases de datos relacionales y no relacionales). Me motiva convertir ideas en soluciones tangibles. En cada proyecto mi meta es: escalar con rendimiento, mantener un código limpio, y garantizar una UX intuitiva.",
+  "title": "Hola, mi nombre es",
+  "subtitle": "Soy un ",
+  "roles": [
+    "Ingeniero de Software",
+    "Desarrollador Frontend",
+    "Desarrollador Backend",
+    "Desarrollador Fullstack"
+  ],
+  "description": "Combino mi pasión por la tecnología con un claro enfoque en la funcionalidad y la experiencia de usuario. Empleo tecnologías modernas como; React, Node/ASP.NET, bases de datos relacionales y no relacionales. Me motiva convertir ideas en soluciones tangibles. En cada proyecto mi meta es: escalar con rendimiento, mantener un código limpio, y garantizar una UX intuitiva.",
   "btn-projects": "Ver mis proyectos",
   "btn-cv": "Descargar mi CV"
 }
