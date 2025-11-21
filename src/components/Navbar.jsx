@@ -7,6 +7,9 @@ const Navbar = () => {
   const theme = localStorage.getItem("portfolioTheme");
   const [isDark, setIsDark] = useState(theme === "dark");
   const [isOpen, setIsOpen] = useState(false);
+  const [lang, setLang] = useState(
+    localStorage.getItem("portfolioLang") || "es"
+  );
   const { t, i18n } = useTranslation("navbar");
 
   const links = t("links", { returnObjects: true });
@@ -14,6 +17,7 @@ const Navbar = () => {
   const changeLang = (lang) => {
     i18n.changeLanguage(lang);
     localStorage.setItem("portfolioLang", lang);
+    setLang(lang);
   };
 
   useEffect(() => {
@@ -55,14 +59,22 @@ const Navbar = () => {
           <li className="flex space-x-2 items-center">
             <button
               onClick={() => changeLang("es")}
-              className="text-foreground transition-colors hover:text-[#3498DB] capitalize cursor-pointer"
+              className={`capitalize cursor-pointer transition-colors ${
+                lang === "es"
+                  ? "text-[#3498DB] font-semibold"
+                  : "text-foreground hover:text-[#3498DB]"
+              }`}
             >
               {t("lang_es")}
             </button>
             <span className="text-foreground">|</span>
             <button
               onClick={() => changeLang("en")}
-              className="text-foreground transition-colors hover:text-[#3498DB] capitalize cursor-pointer"
+              className={`capitalize cursor-pointer transition-colors ${
+                lang === "en"
+                  ? "text-[#3498DB] font-semibold"
+                  : "text-foreground hover:text-[#3498DB]"
+              }`}
             >
               {t("lang_en")}
             </button>
@@ -110,14 +122,22 @@ const Navbar = () => {
               <li className="flex space-x-4">
                 <button
                   onClick={() => changeLang("es")}
-                  className="text-lg hover:text-[#3498DB] transition"
+                  className={`text-lg hover:text-[#3498DB] transition ${
+                    lang === "es"
+                      ? "text-[#3498DB] font-semibold"
+                      : "text-foreground hover:text-[#3498DB]"
+                  }`}
                 >
                   {t("lang_es")}
                 </button>
                 <span className="text-foreground">|</span>
                 <button
                   onClick={() => changeLang("en")}
-                  className="text-lg hover:text-[#3498DB] transition"
+                  className={`text-lg hover:text-[#3498DB] transition ${
+                    lang === "en"
+                      ? "text-[#3498DB] font-semibold"
+                      : "text-foreground hover:text-[#3498DB]"
+                  }`}
                 >
                   {t("lang_en")}
                 </button>

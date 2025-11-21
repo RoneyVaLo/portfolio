@@ -24,9 +24,9 @@ const Layout = ({ children }) => {
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3498DB] text-xl font-bold text-white">
               RV
             </div>
-            {/* <span className="hidden text-xl font-bold text-foreground sm:inline-block">
-              Mi Portafolio
-            </span> */}
+            <span class="text-sm font-medium text-foreground/70 hidden sm:block">
+              Roney Valdelomar
+            </span>
           </a>
           <Navbar />
         </div>

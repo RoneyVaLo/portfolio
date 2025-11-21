@@ -49,7 +49,7 @@ const AboutMe = () => {
                 isVisible && "animate-fade-in-left animate-delay-300"
               )}
             >
-              {t("title")}
+              {t("subtitle")}
             </h3>
 
             {Array.isArray(description) &&
@@ -57,44 +57,13 @@ const AboutMe = () => {
                 <p
                   key={index}
                   className={cn(
-                    "text-lg text-foreground/80 text-justify text-balance",
+                    "text-lg text-foreground/80 text-justify text-pretty",
                     isVisible && "animate-fade-in-left animate-delay-400"
                   )}
                 >
                   {paragraph}
                 </p>
               ))}
-
-            {/* <p
-              className={cn(
-                "text-lg text-foreground/80 text-justify text-balance",
-                isVisible && "animate-fade-in-left animate-delay-400"
-              )}
-            >
-              Desde muy temprano en mi formación me fascinó la idea de que un
-              fragmento de código pudiera facilitar procesos, conectar personas
-              y transformar realidades. Esta motivación me ha guiado a
-              especializarme en desarrollo full-stack: disfruto tanto al
-              construir la interfaz que el usuario toca como al diseñar la
-              lógica de negocio que lo sostiene.
-            </p>
-            <p
-              className={cn(
-                "text-lg text-foreground/80 text-justify text-balance",
-                isVisible && "animate-fade-in-left animate-delay-500"
-              )}
-            >
-              Me caracterizo por mi capacidad de adaptación rápida ante nuevos
-              retos tecnológicos (como se observa en los diversos proyectos de
-              GitHub donde he explorado tanto VanillaJS como frameworks
-              modernos), y por tener un fuerte compromiso con el aprendizaje
-              continuo. Creo firmemente que un buen desarrollo no es solo sobre
-              “hacer que funcione”, sino sobre hacer que funcione bien, sea
-              mantenible y aporte valor real. En el futuro, mi objetivo es
-              seguir colaborando en entornos donde pueda aportar no solo
-              técnica, sino visión y responsabilidad en la entrega de productos
-              digitales.
-            </p> */}
             <div
               className={cn(
                 "flex space-x-4 pt-4",

@@ -9,8 +9,6 @@ const Hero = () => {
   const [ref, isVisible] = useInView();
   const { t, i18n } = useTranslation("hero");
 
-  console.log(i18n.language);
-
   return (
     <section
       id="home"
@@ -26,7 +24,7 @@ const Hero = () => {
                 isVisible && "animate-fade-in-right animate-delay-100"
               )}
             >
-              {t("title")}
+              {t("title")} <span class="text-[#3498DB]">Roney Valdelomar</span>
             </h1>
             <p
               className={cn(
@@ -38,7 +36,7 @@ const Hero = () => {
             </p>
             <p
               className={cn(
-                "text-lg text-justify text-balance text-foreground/70",
+                "text-lg text-justify text-pretty text-foreground/70",
                 isVisible && "animate-fade-in-right animate-delay-400"
               )}
             >
@@ -54,7 +52,7 @@ const Hero = () => {
                   isVisible && "animate-fade-in-right animate-delay-800"
                 )}
               >
-                <a href="#proyectos">{t("btn-projects")}</a>
+                <a href="#projects">{t("btn-projects")}</a>
               </button>
 
               <a
