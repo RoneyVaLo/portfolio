@@ -1,13 +1,52 @@
 {
-  "title": "My Skills",
-  "technical-skills-title": "Technical Skills",
-  "soft-skills-title": "Soft Skills",
-  "soft-skills": [
-    "Teamwork",
-    "Clear and empathetic communication",
-    "Problem-solving",
-    "Adaptability to new challenges",
-    "Critical thinking",
-    "Continuous learning and improvement"
+  "title": "Skills & Technologies",
+  "skills": [
+    {
+      "name": "Frontend",
+      "skills": [
+        "React.js",
+        "Next.js",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "name": "Backend",
+      "skills": [
+        "C#",
+        "ASP.NET Core",
+        ".NET Web API",
+        "Entity Framework Core",
+        "Node.js",
+        "Express.js",
+        "RESTful APIs",
+        "JWT Authentication"
+      ]
+    },
+    {
+      "name": "Database",
+      "skills": ["PostgreSQL", "SQL Server", "MongoDB", "Database Design"]
+    },
+    {
+      "name": "DevOps & Tools",
+      "skills": ["Git", "GitHub", "Visual Studio 2022", "VS Code"]
+    },
+    {
+      "name": "Programming Languages",
+      "skills": ["Python", "Java"]
+    },
+    {
+      "name": "Soft Skills",
+      "skills": [
+        "Teamwork",
+        "Problem Solving",
+        "Agile/Scrum",
+        "Communication",
+        "Time Management"
+      ]
+    }
   ]
 }

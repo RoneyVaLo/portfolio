@@ -1,13 +1,57 @@
 {
-  "title": "Mis Habilidades",
-  "technical-skills-title": "Habilidades Técnicas",
-  "soft-skills-title": "Habilidades Blandas",
-  "soft-skills": [
-    "Trabajo en equipo",
-    "Comunicación clara y empática",
-    "Resolución de problemas",
-    "Adaptabilidad ante nuevos retos",
-    "Pensamiento crítico",
-    "Aprendizaje continuo y mejora constante"
+  "title": "Habilidades y Tecnologías",
+  "skills": [
+    {
+      "name": "Frontend",
+      "skills": [
+        "React.js",
+        "Next.js",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "name": "Backend",
+      "skills": [
+        "C#",
+        "ASP.NET Core",
+        ".NET Web API",
+        "Entity Framework Core",
+        "Node.js",
+        "Express.js",
+        "API RESTful",
+        "Autenticación JWT"
+      ]
+    },
+    {
+      "name": "Bases de Datos",
+      "skills": [
+        "PostgreSQL",
+        "SQL Server",
+        "MongoDB",
+        "Diseño de Bases de Datos"
+      ]
+    },
+    {
+      "name": "DevOps y Herramientas",
+      "skills": ["Git", "GitHub", "Visual Studio 2022", "VS Code"]
+    },
+    {
+      "name": "Lenguajes de Programación",
+      "skills": ["Python", "Java"]
+    },
+    {
+      "name": "Habilidades Blandas",
+      "skills": [
+        "Trabajo en equipo",
+        "Resolución de problemas",
+        "Agile/Scrum",
+        "Comunicación",
+        "Gestión del tiempo"
+      ]
+    }
   ]
 }
