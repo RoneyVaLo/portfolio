@@ -7,29 +7,17 @@
     "demo": "https://ctp-docente-portal.onrender.com/"
   },
   {
+    "id": "antojitos-sheo",
+    "image": "/antojitos-sheo.webp",
+    "technologies": ["ReactJS", "Tailwind CSS", "Typescript", "Strapi CMS"],
+    "github": "https://github.com/RoneyVaLo/dynamic-cv",
+    "demo": "https://antojitos-sheo.vercel.app/"
+  },
+  {
     "id": "galeria-logros",
     "image": "/frame_my_path.webp",
     "technologies": ["ReactJS", "Vite", "Tailwind CSS", "Lucide React"],
     "github": "https://github.com/RoneyVaLo/frame-my-path",
     "demo": "https://frame-my-path.vercel.app/"
-  },
-  {
-    "id": "bingo-navidad",
-    "image": "/christmas_bingo.webp",
-    "technologies": ["HTML5", "CSS3", "JavaScript (Vanilla)", "JSON"],
-    "github": "https://github.com/RoneyVaLo/bingo-navidad",
-    "demo": "https://roneyvalo.github.io/bingo-navidad/"
-  },
-  {
-    "id": "cv-dinamico",
-    "image": "/dynamic_cv.webp",
-    "technologies": [
-      "ReactJS",
-      "Tailwind CSS",
-      "React-i18next",
-      "@React-pdf/renderer"
-    ],
-    "github": "https://github.com/RoneyVaLo/dynamic-cv",
-    "demo": "https://dynamic-cv-beta.vercel.app/"
   }
 ]

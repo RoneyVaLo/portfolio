@@ -19,5 +19,9 @@
   "cv-dinamico": {
     "title": "Dynamic Resume",
     "description": "Dynamic resume editor built with React, featuring internationalization and PDF export support."
+  },
+  "antojitos-sheo": {
+    "title": "Sheo Snacks",
+    "description": "Web application for the management and display of pastry products, allowing you to explore a dynamic catalog of desserts with content managed from a CMS."
   }
 }

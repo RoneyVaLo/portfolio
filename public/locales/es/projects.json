@@ -19,5 +19,9 @@
   "cv-dinamico": {
     "title": "CV Dinámico",
     "description": "Editor de CV dinámico en React con internacionalización y exportación a PDF mediante @react-pdf/renderer."
+  },
+  "antojitos-sheo": {
+    "title": "Antojitos Sheo",
+    "description": "Aplicación web para la gestión y visualización de productos de repostería, permitiendo explorar un catálogo dinámico de postres con contenido administrado desde un CMS."
   }
 }
