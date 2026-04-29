@@ -10,7 +10,7 @@
     "id": "antojitos-sheo",
     "image": "/antojitos-sheo.webp",
     "technologies": ["ReactJS", "Tailwind CSS", "Typescript", "Strapi CMS"],
-    "github": "https://github.com/RoneyVaLo/dynamic-cv",
+    "github": "https://github.com/RoneyVaLo/sweet-portfolio-frontend",
     "demo": "https://antojitos-sheo.vercel.app/"
   },
   {

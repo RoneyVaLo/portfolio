@@ -1,39 +1,27 @@
-import React from "react";
-import { cn } from "../utils/cn";
-import { Github } from "lucide-react";
-import { Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 const SocialMedia = () => {
   return (
-    <div className="flex space-x-4">
-      <a href="https://github.com/RoneyVaLo/" target="_blank">
-        <button
-          className={cn(
-            "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-            "bg-foreground text-popover shadow-2xl",
-            "size-9",
-            "rounded-full cursor-pointer hover:animate-jelly"
-          )}
-        >
-          <Github className="h-5 w-5" />
-          <span className="sr-only">GitHub</span>
-        </button>
+    <div className="flex items-center gap-3" role="list" aria-label="Redes sociales">
+      <a
+        href="https://github.com/RoneyVaLo/"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="listitem"
+        aria-label="Perfil de GitHub de Roney Valdelomar"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background text-foreground/60 shadow-sm transition-all hover:border-foreground/40 hover:text-foreground hover:shadow-md hover:-translate-y-0.5"
+      >
+        <Github className="h-4 w-4" aria-hidden="true" />
       </a>
       <a
         href="https://www.linkedin.com/in/roney-valdelomar-l%C3%B3pez-b8269b211/"
         target="_blank"
+        rel="noopener noreferrer"
+        role="listitem"
+        aria-label="Perfil de LinkedIn de Roney Valdelomar"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background text-foreground/60 shadow-sm transition-all hover:border-brand-blue/50 hover:text-brand-blue hover:shadow-md hover:-translate-y-0.5"
       >
-        <button
-          className={cn(
-            "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-            "bg-foreground text-popover shadow-2xl",
-            "size-9",
-            "rounded-full cursor-pointer hover:animate-jelly"
-          )}
-        >
-          <Linkedin className="h-5 w-5" />
-          <span className="sr-only">LinkedIn</span>
-        </button>
+        <Linkedin className="h-4 w-4" aria-hidden="true" />
       </a>
     </div>
   );

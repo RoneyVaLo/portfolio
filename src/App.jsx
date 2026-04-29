@@ -12,26 +12,25 @@ const App = () => {
   return (
     <Layout>
       <Analytics />
-      <main className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <Hero />
+      {/* Hero Section */}
+      <Hero />
 
-        {/* About Me Section */}
-        <AboutMe />
+      {/* About Me Section */}
+      <AboutMe />
 
-        {/* Projects Section */}
-        <Projects />
+      {/* Projects Section */}
+      <Projects />
 
-        {/* Skills Section */}
-        <Skills />
+      {/* Skills Section */}
+      <Skills />
 
-        {/* Education Section */}
-        <Education />
+      {/* Education Section */}
+      <Education />
 
-        {/* Contact Section */}
-        <Contact />
-      </main>
-      <Toaster />
+      {/* Contact Section */}
+      <Contact />
+
+      <Toaster richColors position="bottom-right" />
     </Layout>
   );
 };

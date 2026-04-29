@@ -6,47 +6,65 @@ import SocialMedia from "./SocialMedia";
 const AboutMe = () => {
   const { t } = useTranslation("about");
   const [ref, isVisible] = useInView();
-
   const description = t("description", { returnObjects: true });
 
   return (
-    <section
-      id="about-me"
-      ref={ref}
-      className="bg-foreground/10 py-20 md:py-24"
-    >
+    <section id="about-me" ref={ref} className="bg-surface-alt py-24 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <h2
+        {/* Section header */}
+        <div
           className={cn(
-            "mb-12 text-center code-font text-3xl font-bold text-foreground md:text-4xl",
-            isVisible && "animate-fade-in-left"
+            "mb-16 text-center",
+            isVisible && "animate-fade-in-down",
           )}
         >
-          {t("title")}
-        </h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="flex h-full justify-center items-center">
-            <div
-              className={cn(
-                "relative overflow-hidden rounded-lg",
-                isVisible &&
-                  "animate-pulse-fade-in animate-delay-300 animate-duration-1000"
-              )}
-            >
-              <img
-                src="/profile2.webp"
-                alt="Foto profesional"
-                className="object-cover"
-                height={384}
-                width={320}
+          <h2 className="code-font text-2xl font-semibold uppercase tracking-widest text-brand-orange mb-2">
+            {t("title")}
+          </h2>
+        </div>
+
+        <div className="grid gap-12 md:grid-cols-2 items-center">
+          {/* Photo */}
+          <div
+            className={cn(
+              "flex justify-center",
+              isVisible && "animate-fade-in-right animate-delay-200",
+            )}
+          >
+            <div className="relative">
+              {/* Decorative frame */}
+              <div
+                className="absolute -inset-3 rounded-2xl border-2 border-brand-blue/20 rotate-3"
+                aria-hidden="true"
               />
+              <div
+                className="absolute -inset-3 rounded-2xl border-2 border-brand-orange/15 -rotate-2"
+                aria-hidden="true"
+              />
+              <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                <img
+                  src="/profile2.webp"
+                  alt="Foto profesional de Roney Valdelomar"
+                  className="object-cover w-72 h-80 md:w-80 md:h-96"
+                  width={320}
+                  height={384}
+                  loading="lazy"
+                />
+                {/* Subtle overlay gradient */}
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-foreground/10 to-transparent"
+                  aria-hidden="true"
+                />
+              </div>
             </div>
           </div>
+
+          {/* Content */}
           <div className="space-y-6">
             <h3
               className={cn(
-                "code-font text-2xl font-semibold text-[#3498DB]",
-                isVisible && "animate-fade-in-left animate-delay-300"
+                "code-font text-2xl font-bold text-brand-blue",
+                isVisible && "animate-fade-in-left animate-delay-300",
               )}
             >
               {t("subtitle")}
@@ -57,17 +75,19 @@ const AboutMe = () => {
                 <p
                   key={index}
                   className={cn(
-                    "text-lg text-foreground/80 text-justify text-pretty",
-                    isVisible && "animate-fade-in-left animate-delay-400"
+                    "text-base leading-relaxed text-foreground/70 text-pretty",
+                    isVisible && "animate-fade-in-left animate-delay-400",
                   )}
+                  style={{ animationDelay: `${400 + index * 100}ms` }}
                 >
                   {paragraph}
                 </p>
               ))}
+
             <div
               className={cn(
-                "flex space-x-4 pt-4",
-                isVisible && "animate-fade-in-left animate-delay-700"
+                "pt-2",
+                isVisible && "animate-fade-in-left animate-delay-600",
               )}
             >
               <SocialMedia />

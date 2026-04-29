@@ -1,7 +1,5 @@
-import React from "react";
 import { cn } from "../utils/cn";
-import { Github } from "lucide-react";
-import { ExternalLink } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import projects from "../assets/projects.json";
 import { useInView } from "../hooks/useInView";
 import { useTranslation } from "react-i18next";
@@ -11,102 +9,97 @@ const Projects = () => {
   const { t } = useTranslation("projects");
 
   return (
-    <section id="projects" ref={ref} className="bg-background py-20 md:py-32">
+    <section id="projects" ref={ref} className="bg-background py-24 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <h2
+        {/* Section header */}
+        <div
           className={cn(
-            "mb-12 text-center code-font text-3xl font-bold text-foreground md:text-4xl",
-            isVisible && "animate-fade-in-down"
+            "mb-16 text-center",
+            isVisible && "animate-fade-in-down",
           )}
         >
-          {t("title")}
-        </h2>
+          <h2 className="code-font text-2xl font-semibold uppercase tracking-widest text-brand-orange mb-2">
+            {t("title")}
+          </h2>
+        </div>
+
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <div
+            <article
               key={project.id}
               className={cn(
-                "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border-2 border-accent pb-6 shadow-sm",
-                "overflow-hidden transition-all hover:shadow-lg",
-                isVisible && "animate-zoom-in animate-duration-700"
+                "group relative flex flex-col rounded-2xl border border-border bg-card overflow-hidden",
+                "shadow-sm transition-all duration-300",
+                "hover:shadow-xl hover:shadow-foreground/5 hover:-translate-y-1 hover:border-brand-blue/30",
+                isVisible && "animate-zoom-in animate-duration-700",
               )}
-              style={{
-                animationDelay: `${index * 200}ms`, // cada elemento 200ms más tarde
-              }}
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="relative h-52 w-full">
+              {/* Image */}
+              <div className="relative h-48 w-full overflow-hidden bg-accent">
                 <img
                   src={project.image || "/placeholder.svg"}
-                  alt={t(`${project.id}.title`)}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  alt={`Captura de pantalla de ${t(`${project.id}.title`)}`}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  width={400}
+                  height={192}
+                />
+                {/* Overlay on hover */}
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  aria-hidden="true"
                 />
               </div>
-              <div
-                className={cn(
-                  "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-2 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6"
-                )}
-              >
-                <div className={cn("leading-none font-semibold code-font")}>
-                  {t(`${project.id}.title`)}
+
+              {/* Content */}
+              <div className="flex flex-col flex-1 p-5 gap-4">
+                <div className="space-y-1.5">
+                  <h3 className="code-font font-bold text-foreground leading-snug">
+                    {t(`${project.id}.title`)}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                    {t(`${project.id}.description`)}
+                  </p>
                 </div>
-                <div className={cn("text-muted-foreground text-sm")}>
-                  {t(`${project.id}.description`)}
-                </div>
-              </div>
-              <div className={cn("px-6")}>
-                <div className="flex flex-wrap gap-2">
+
+                {/* Tech tags */}
+                <div className="flex flex-wrap gap-1.5 mt-auto">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="code-font rounded-full bg-[#3498DB]/10 px-3 py-1 text-xs font-bold text-[#3498DB]"
+                      className="code-font rounded-md bg-brand-blue/8 px-2.5 py-0.5 text-xs font-semibold text-brand-blue border border-brand-blue/15"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-              </div>
-              <div
-                className={cn(
-                  "flex items-center px-6 [.border-t]:pt-6",
-                  "flex justify-between"
-                )}
-              >
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button
-                    className={cn(
-                      "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all shrink-0 outline-none focus-visible:border-[#020817] focus-visible:ring-[#020817]/50 focus-visible:ring-[3px]", // Estilos Base
-                      "border bg-white shadow-xs hover:bg-[#dedede] hover:text-[#0f172a] dark:bg-[#e2e8f0]/30 dark:border-[#e2e8f0] dark:hover:bg-[#e2e8f0]/50", // Variante Outline
-                      "h-8 rounded-md gap-1.5 px-3", // Size sm
-                      "cursor-pointer hover:scale-105"
-                    )}
+
+                {/* Actions */}
+                <div className="flex items-center gap-2 pt-1 border-t border-border">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ver código de ${t(`${project.id}.title`)} en GitHub`}
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-foreground/70 transition-all hover:border-foreground/40 hover:text-foreground hover:bg-accent"
                   >
-                    <Github className="mr-2 h-4 w-4" />
+                    <Github className="h-3.5 w-3.5" aria-hidden="true" />
                     GitHub
-                  </button>
-                </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button
-                    className={cn(
-                      "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all shrink-0 outline-none focus-visible:border-[#020817] focus-visible:ring-[#020817]/50 focus-visible:ring-[3px]",
-                      "border bg-white shadow-xs hover:bg-[#f1f5f9] hover:text-[#0f172a] dark:bg-[#e2e8f0]/30 dark:border-[#e2e8f0] dark:hover:bg-[#e2e8f0]/50",
-                      "h-8 rounded-md gap-1.5 px-3",
-                      "cursor-pointer hover:scale-105"
-                    )}
+                  </a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ver demo de ${t(`${project.id}.title`)}`}
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-brand-blue/10 border border-brand-blue/20 px-3 py-1.5 text-xs font-medium text-brand-blue transition-all hover:bg-brand-blue hover:text-white hover:border-brand-blue"
                   >
-                    <ExternalLink className="mr-2 h-4 w-4" />
+                    <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                     Demo
-                  </button>
-                </a>
+                  </a>
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
