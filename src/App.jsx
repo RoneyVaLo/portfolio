@@ -7,10 +7,12 @@ import Contact from "./components/Contact";
 import { Toaster } from "sonner";
 import Education from "./components/Education";
 import { Analytics } from "@vercel/analytics/react";
+import SEO from "./components/SEO";
 
 const App = () => {
   return (
     <Layout>
+      <SEO />
       <Analytics />
       {/* Hero Section */}
       <Hero />

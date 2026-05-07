@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://portfolio-4r86.vercel.app/sitemap.xml
