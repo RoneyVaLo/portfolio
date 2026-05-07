@@ -3,6 +3,7 @@
   "skills": [
     {
       "name": "Frontend",
+      "icon": "Code2",
       "skills": [
         "React.js",
         "Next.js",
@@ -15,6 +16,7 @@
     },
     {
       "name": "Backend",
+      "icon": "Server",
       "skills": [
         "C#",
         "ASP.NET Core",
@@ -28,18 +30,22 @@
     },
     {
       "name": "Database",
+      "icon": "Database",
       "skills": ["PostgreSQL", "SQL Server", "MongoDB", "Database Design"]
     },
     {
       "name": "DevOps & Tools",
+      "icon": "Terminal",
       "skills": ["Git", "GitHub", "Visual Studio 2022", "VS Code"]
     },
     {
       "name": "Programming Languages",
+      "icon": "FileCode",
       "skills": ["Python", "Java"]
     },
     {
       "name": "Soft Skills",
+      "icon": "HeartHandshake",
       "skills": [
         "Teamwork",
         "Problem Solving",
